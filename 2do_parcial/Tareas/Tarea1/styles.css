@@ -1,0 +1,113 @@
+:root{
+    --color-principal: #0d47a1;
+    --color-secundario: #42a5f5;
+    --color-fondo: #eef5ff;
+    --color-texto: #333333;
+    --color-titulos: #003366;
+    --color-blanco: #ffffff;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif; background-color: var(--color-fondo); color: var(--color-texto);
+}
+
+header{
+    background-color: var(--color-principal); padding: 30px; text-align: center; display: flex; gap: 15px; align-items: center; justify-content: center;
+}
+
+h1{
+    color: white;
+}
+
+h2{
+    color: var(--color-titulos);
+}
+
+p{
+    line-height: 1.6;
+}
+
+footer{
+    background-color: var(--color-principal); color: white; text-align: center; padding: 15px; margin-top: 30px;
+}
+
+.menu{
+    list-style: none; padding: 0; margin-top: 20px;
+}
+
+.menu li{
+    display: inline-block; margin: 0 15px;
+}
+
+.presentacion{
+    background-color: white; padding: 25px; margin: 20px; border-radius: 10px;
+}
+
+.tarjeta{
+    background-color: white; margin: 20px; padding: 20px; border: 2px solid var(--color-secundario); border-radius: 10px;
+}
+
+.informacion{
+    background-color: #dbeafe; margin: 20px; padding: 20px; border-left: 6px solid var(--color-principal);
+}
+
+.tarjeta.destacado{
+    background-color: #bbdefb; border: 3px solid #1565c0;
+}
+
+#logo{
+    font-size: 40px; letter-spacing: 2px;
+}
+
+#destinos{
+    padding: 20px;
+}
+
+#copyright{
+    font-size: 15px; font-style: italic;
+}
+
+header nav a{
+    color: white; text-decoration: none; font-weight: bold;
+}
+
+.menu li a{
+    padding: 8px 12px;
+}
+
+section article p{
+    color: #555;
+}
+
+footer p{
+    margin: 0;
+}
+
+.menu li a:hover{
+    background-color: white; color: var(--color-principal); border-radius: 5px;
+}
+
+.tarjeta:hover{
+    transform: scale(1.02);
+}
+
+.menu li:first-child a{
+    text-decoration: underline;
+}
+
+.menu li:last-child a{
+    color: yellow;
+}
+
+.img{
+    width: 100px; height: 100px; border-radius: 10px;margin-right: 700px;
+}
+
+#copyright::after{
+    content: " | XDXDXDXD.";
+}
+
+.menu li a:not(:hover){
+    transition: 0.3s;
+}
