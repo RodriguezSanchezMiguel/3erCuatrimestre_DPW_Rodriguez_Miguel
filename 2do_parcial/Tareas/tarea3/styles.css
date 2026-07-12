@@ -1,0 +1,605 @@
+:root{
+
+    --color-principal:#0b1d51;
+    --color-secundario:#d4af37;
+    --color-fondo:#eef4ff;
+    --color-blanco:#ffffff;
+    --color-texto:#333;
+    --color-hover:#f7d54b;
+
+    --sombra:0px 5px 15px rgba(0,0,0,.2);
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:var(--color-fondo);
+    color:var(--color-texto);
+
+}
+
+img{
+
+    width:100%;
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+button{
+
+    border:none;
+    cursor:pointer;
+
+}
+
+
+/* display:flex
+Se utiliza para convertir el encabezado en un contenedor flexible.
+Permite acomodar el logo y el menú en la misma fila.
+*/
+
+header{
+
+    display:flex;
+
+    /* justify-content: space-between
+    Distribuye el logo y el menú dejando el mayor espacio posible entre ellos.
+    */
+
+    justify-content:space-between;
+
+    /* align-items:center
+    Centra verticalmente el contenido del encabezado.
+    */
+
+    align-items:center;
+
+    padding:20px 8%;
+
+    background:var(--color-principal);
+
+}
+
+.logo{
+
+    color:white;
+    font-size:32px;
+    font-weight:bold;
+
+    /* flex-grow
+    Hace que el logo ocupe el espacio disponible para empujar el menú hacia la derecha.
+    */
+
+    flex-grow:1;
+
+}
+
+nav{
+
+    display:flex;
+
+    /* gap
+    Separa los enlaces sin utilizar márgenes.
+    */
+
+    gap:30px;
+
+}
+
+nav a{
+
+    color:white;
+    font-weight:600;
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:var(--color-hover);
+
+}
+
+/* display:flex
+Convierte el banner principal en un contenedor flexible.
+*/
+
+.hero{
+
+    display:flex;
+
+    /* justify-content:space-around
+    Distribuye ambos bloques dejando espacio alrededor.
+    */
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    min-height:90vh;
+
+    padding:60px 8%;
+
+    background:linear-gradient(135deg,#06143b,#163c8b);
+
+    color:white;
+
+    gap:60px;
+
+}
+
+.hero-texto{
+
+    display:flex;
+
+    /* flex-direction:column
+    Organiza el título, texto y botón de arriba hacia abajo.
+    */
+
+    flex-direction:column;
+
+    gap:25px;
+
+    flex:1;
+
+}
+
+.hero-texto h1{
+
+    font-size:58px;
+
+}
+
+.hero-texto p{
+
+    font-size:18px;
+    line-height:1.8;
+
+}
+
+.hero button{
+
+    width:180px;
+
+    padding:15px;
+
+    background:var(--color-secundario);
+
+    color:black;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.hero button:hover{
+
+    background:var(--color-hover);
+
+}
+
+.hero-imagen{
+
+    flex:1;
+
+}
+
+.hero-imagen img{
+
+    max-width:500px;
+
+    margin:auto;
+
+}
+
+.servicios{
+
+    padding:80px 8%;
+
+    text-align:center;
+
+}
+
+.servicios h2{
+
+    font-size:40px;
+
+    color:var(--color-principal);
+
+    margin-bottom:50px;
+
+}
+
+/* display:flex
+Convierte las tarjetas en un contenedor flexible.
+*/
+
+.contenedor-tarjetas{
+
+    display:flex;
+
+    /* flex-wrap
+    Permite que las tarjetas bajen automáticamente cuando no haya espacio.
+    */
+
+    flex-wrap:wrap;
+
+    /* justify-content:space-evenly
+    Reparte las tarjetas con espacios iguales.
+    */
+
+    justify-content:space-evenly;
+
+    gap:30px;
+
+}
+
+.tarjeta{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:var(--sombra);
+
+    transition:.4s;
+
+    /* flex-basis
+    Define el tamaño inicial de cada tarjeta.
+    */
+
+    flex-basis:320px;
+
+    /* flex-shrink
+    Permite que las tarjetas reduzcan ligeramente su tamaño cuando el espacio es pequeño,
+    evitando que se desborden del contenedor.
+    */
+
+    flex-shrink:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.tarjeta:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.tarjeta h3{
+
+    color:var(--color-principal);
+
+}
+
+.tarjeta p{
+
+    line-height:1.7;
+
+    flex-grow:1;
+
+}
+
+.tarjeta button{
+
+    padding:12px;
+
+    background:var(--color-principal);
+
+    color:white;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+}
+
+.tarjeta button:hover{
+
+    background:var(--color-secundario);
+
+    color:black;
+
+}
+
+/* display:flex
+Se utiliza para colocar la imagen y el texto uno al lado del otro.
+*/
+
+.porque{
+
+    display:flex;
+
+    /* justify-content:center
+    Centra ambos bloques horizontalmente.
+    */
+
+    justify-content:center;
+
+    /* align-items:center
+    Centra verticalmente la imagen y el texto.
+    */
+
+    align-items:center;
+
+    gap:60px;
+
+    padding:90px 8%;
+
+    background:white;
+
+}
+
+.imagen{
+
+    flex:1;
+
+}
+
+.imagen img{
+
+    width:100%;
+    max-width:500px;
+
+    border-radius:15px;
+
+    box-shadow:var(--sombra);
+
+}
+
+.texto{
+
+    flex:1;
+
+    display:flex;
+
+    /* flex-direction:column
+    Organiza el contenido de arriba hacia abajo.
+    */
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+.texto h2{
+
+    font-size:42px;
+
+    color:var(--color-principal);
+
+}
+
+.texto p{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+/* display:flex
+Permite distribuir las tres columnas del pie de página.
+*/
+
+footer{
+
+    display:flex;
+
+    /* justify-content:space-around
+    Distribuye uniformemente cada columna.
+    */
+
+    justify-content:space-around;
+
+    align-items:flex-start;
+
+    gap:40px;
+
+    flex-wrap:wrap;
+
+    padding:50px 8%;
+
+    background:var(--color-principal);
+
+    color:white;
+
+}
+
+footer div{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+    min-width:220px;
+
+}
+
+footer h3{
+
+    color:var(--color-secundario);
+
+    margin-bottom:10px;
+
+}
+
+footer a{
+
+    color:white;
+
+    transition:.3s;
+
+}
+
+footer a:hover{
+
+    color:var(--color-hover);
+
+}
+
+footer p{
+
+    line-height:1.7;
+
+}
+
+@media(max-width:1000px){
+
+    header{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+    nav{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    .hero{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .hero-texto{
+
+        align-items:center;
+
+    }
+
+    .hero-texto h1{
+
+        font-size:42px;
+
+    }
+
+    .porque{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .servicios h2{
+
+        font-size:32px;
+
+    }
+
+    .texto h2{
+
+        font-size:32px;
+
+    }
+
+    .hero{
+
+        padding:50px 25px;
+
+    }
+
+    .servicios{
+
+        padding:60px 25px;
+
+    }
+
+    .porque{
+
+        padding:60px 25px;
+
+    }
+
+    footer{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        text-align:center;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .logo{
+
+        font-size:24px;
+
+    }
+
+    nav{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .hero-texto h1{
+
+        font-size:34px;
+
+    }
+
+    .hero-texto p{
+
+        font-size:16px;
+
+    }
+
+    .tarjeta{
+
+        flex-basis:100%;
+
+    }
+
+    button{
+
+        width:100%;
+
+    }
+
+}
