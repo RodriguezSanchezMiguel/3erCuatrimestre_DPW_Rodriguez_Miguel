@@ -1,0 +1,26 @@
+body {
+    min-height: 100vh;
+}
+
+.card .btn-primary {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+}
+
+.card .btn-primary:hover,
+.card .btn-primary:focus {
+    background-color: #5a34a8;
+    border-color: #5a34a8;
+}
+
+.card .btn-secondary {
+    background-color: #20c997;
+    border-color: #20c997;
+    color: #fff;
+}
+
+.card .btn-secondary:hover,
+.card .btn-secondary:focus {
+    background-color: #199d76;
+    border-color: #199d76;
+}

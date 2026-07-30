@@ -1,0 +1,123 @@
+:root {
+    --color-primary: blue;
+    --color-secondary: gray;
+    --color-tertiary: white;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    --color-primary:blue;
+}
+
+/* --- Componentes --- */
+.header {
+    background-color: #2c3e50;
+    --color-tertiary:white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.nav ul {
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+    align-items:center;
+    padding-top:1rem;
+}
+
+.nav a {
+    --color-terteary:white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    --color-primary:blue;
+}
+
+.container {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid-directorio {
+    display: grid;
+    grid-template-columns: 1fr; /* Móvil: 1 sola columna */
+    gap: 1.5rem;
+}
+
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #2c3e50;
+    --color-tertiary:white;
+    margin-top: 2rem;
+}
+
+@media (max-width:480px){
+
+    .header{
+        padding:1rem;
+    }
+
+    h1{
+        font-size:1.5rem;
+    }
+
+    .card{
+        padding:1rem;
+    }
+
+}
+
+@media (min-width:768px){
+    .nav ul{
+        flex-direction:row;
+        justify-content:center;
+    }
+
+    .grid-articulos{
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width:1200px){
+    .header{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+    .nav ul{
+        padding-top:0;
+    }
+    .grid-articulos{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* La media query de 1200px se utiliza para pantallas grandes, como computadoras de escritorio y laptops. En este punto, el diseño cambia a un layout más amplio y distribuido, mostrando más contenido en una sola fila. */
+
+/* La media query de 768px se utiliza para pantallas medianas, como tablets. Aquí, el diseño cambia a un layout de dos columnas para aprovechar mejor el espacio disponible. */
+
+/* La media query de 480px se utiliza para pantallas pequeñas, como smartphones. En este punto, el diseño se adapta a una sola columna para asegurar que el contenido sea legible y accesible en dispositivos móviles. */
