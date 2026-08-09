@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(135deg, #050b14 0%, #0d1b2a 100%);
+    color: #e0e1dd;
+    padding-top: 80px;
+}
+
+h2 {
+    color: #ff4bb4; /* Color rosa/magenta distintivo de tus títulos en el PDF */
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(90deg, #050b14 0%, #00f2fe 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.logo span {
+    color: #050b14;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar nav ul li {
+    margin-left: 25px;
+}
+
+.navbar nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+    color: #050b14;
+}
+
+.placeholder-box {
+    width: 100%;
+    min-height: 350px;
+    background-color: #f7d6c8; /* Tono durazno claro fiel a tus bocetos */
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
+}
+
+.theme-charizard {
+    background: linear-gradient(45deg, #f7d6c8 0%, #a2d2ff 100%);
+}
+
+section {
+    padding: 80px 10%;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #ff4bb4;
+    margin-bottom: 20px;
+}
+
+.resumen {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #adbdcc;
+}
+
+.btn-siguiente {
+    display: inline-block;
+    padding: 12px 35px;
+    background: linear-gradient(45deg, #000046, #1cb5e0);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn-siguiente:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(28, 181, 224, 0.4);
+}
+
+.about-container, .projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.info h3, .info-academic h3 {
+    color: #00f2fe;
+    margin: 20px 0 10px 0;
+    font-size: 1.4rem;
+}
+
+.info p, .info-academic p {
+    line-height: 1.6;
+    color: #adbdcc;
+}
+
+.grid-logros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: rgba(13, 27, 42, 0.6);
+    border: 1px solid rgba(0, 242, 254, 0.2);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: #00f2fe;
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #00f2fe;
+    margin-bottom: 15px;
+}
+
+.contacts-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.contact-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-contact {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(90deg, #050b14 0%, #1a365d 100%);
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 6px;
+    border-left: 5px solid #00f2fe;
+    transition: 0.3s;
+}
+
+.btn-contact:hover {
+    background: linear-gradient(90deg, #00f2fe 0%, #050b14 100%);
+    color: #050b14;
+    padding-left: 25px;
+}
+
+@media (min-width: 1200px) {
+    .navbar { padding: 0 20px; }
+    .navbar nav { display: none; }
+    .hero, .about-container, .projects-container, .contacts-container {
+        grid-template-columns: 1fr;
+    }
+    section { padding: 60px 5%; }
+}
+
+@media (min-width: 768px) {
+    .navbar { padding: 0 20px; }
+    .navbar nav { display: none; }
+    .hero, .about-container, .projects-container, .contacts-container {
+        grid-template-columns: 1fr;
+    }
+    section { padding: 60px 5%; }
+}
+
+@media (min-width: 320px) {
+    .navbar { padding: 0 20px; }
+    .navbar nav { display: none; }
+    .hero, .about-container, .projects-container, .contacts-container {
+        grid-template-columns: 1fr;
+    }
+    section { padding: 60px 5%; }
+}
